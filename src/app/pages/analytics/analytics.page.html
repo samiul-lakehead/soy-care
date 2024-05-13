@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Analytics</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Analytics</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div class="image-ul-form">
+    <div>
+      <h3><label for="captureDate">Which date the image was captured?</label></h3>
+      <input type="date" id="captureDate"  name="captureDate" required>  
+    </div>
+      
+    <div>
+      <h3><label for="seedingDate">Which date the seeds were sowed?</label></h3>
+      <input type="date" id="seedingDate" name="seedingDate" required>  
+    </div>
+
+    <div>
+      <h3><label for="imageFile">Select the calibrated image to upload:</label></h3>
+      <input type="file" id="imageFile" name="image" accept="image/tiff" (change)="onFileSelected($event)">
+    </div>
+
+    <div>
+      &nbsp;
+    </div>
+
+    <div class="submit-btn-container">
+      <div>
+        <button class="photo-ul-btn" (click) = "fetchChlorophyll()">Analyse</button>
+      </div>
+
+      <div *ngIf="showLoader">
+        <ion-spinner name="crescent" color="success"></ion-spinner>
+      </div>
+    </div>
+    
+  </div>
+  
+
+  <div class="image-container" *ngIf="showImage" fxLayout="column" fxLayoutAlign="center center">
+    <img src="{{responseImageUrl}}" alt="No response yet" srcset="">
+    <div>Figure: The constructed LCC (µmol m<sup>-2</sup>) distribution image where lighter yellow (or darker brown) color means lower chlorophyll concentration and darker green color means higher chlorophyll concentration.</div>
+  </div>
+</ion-content>
+
+

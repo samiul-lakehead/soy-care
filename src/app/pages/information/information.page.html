@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Information</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <h1>Vegetation Indices and Chlorophyll Contents in Soybean Plants</h1>
+    
+    <h2>What is Vegetation Index (VI)?</h2>
+    <p>Vegetation indices are mathematical expressions that utilize the reflectance values of different bands of light to assess the health and vitality of vegetation. One key application is in estimating the chlorophyll content in plants, such as soybeans.</p>
+    <p>Vegetation indices are calculated using formulas that involve the reflectance values of different wavelengths. For example, the NDVI is calculated as (NIR - Red) / (NIR + Red), where NIR is the near-infrared reflectance and Red is the red reflectance. Higher NDVI values generally correspond to healthier vegetation.</p>
+   
+    <h2>Example of popular vegetation indices</h2>
+    <p>There are several well-known vegetation indices, such as the Normalized Difference Vegetation Index (NDVI) and the Green Normalized Difference Vegetation Indices (GNDVI), Soil Adjusted Vegetation Indices (SAVI) These indices involve ratios of reflectance values from different parts of the electromagnetic spectrum, particularly the red, green and near-infrared wavelengths.</p>
+    
+    <h2>What is chlorophyll?</h2>
+    <p>Chlorophyll is a pigment critical to photosynthesis, the process by which plants convert light energy into chemical energy. The amount of chlorophyll in a plant is indicative of its health and photosynthetic activity.</p>
+    
+    <h2>How VIs are used to estimate chlorophyll content of Soybean plants?</h2>
+    <p>There are several studies which estimated chlorophyll contents from the calculated vegetation indices from the remote sensing data. Here are some examples,</p>
+    <ul>
+      <li>The first-order differential spectral index contains sufficient spectral information related to the chlorophyll content and has a high chlorophyll prediction <sup><a target="_blank" href="https://www.mdpi.com/2073-4395/13/3/663">1</a></sup></li>
+      <li>Seven broadband vegetation indices NDVI, NDRE, ClGreen (GCI), CCCI, CVI, GNDVI, MCARI were used to estimate changes in chlorophyll a and b content in soybean leaves. Each of these indices reacted differently to changes in the plant condition during the growing season <sup><a target="_blank" href="https://www.e3s-conferences.org/articles/e3sconf/pdf/2021/49/e3sconf_interagromash2021_01008.pdf">2</a></sup></li>
+      <li>TCARI/OSAVI has a non-linear relationship with the chlorophyll content <sup><a href="https://www.sciencedirect.com/science/article/pii/S1569843222000036" target="_blank">3</a></sup></li>
+      <li>A Visible and Near-infrared (NIR) Angle Index (VNAI) was proposed to estimate the chlorophyll content of soybean canopy, and soybean canopy chlorophyll content can be remotely assessed using a robust spectral angle index <sup><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7395406/" target="_blank">4</a></sup></li>
+      <li>The Chlorophyll Indices (CIs) were developed for estimating chlorophyll content, and they also relate closely with green Leaf Area Index (gLAI) because total canopy chlorophyll content has a strong relationship with gLAI <sup><a href="https://calmit.unl.edu/people/agitelson2/pdf/2012/2012-AJ-Combined-VI.PDF" target="_blank">5</a></sup></li>
+    </ul>
+  </div>
+</ion-content>

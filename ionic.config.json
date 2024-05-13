@@ -1,0 +1,7 @@
+{
+  "name": "soy-care",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
